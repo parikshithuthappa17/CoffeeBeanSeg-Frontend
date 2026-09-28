@@ -1,0 +1,44 @@
+<svg width="900" height="360" viewBox="0 0 900 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="360" rx="32" fill="#FFF8F0"/>
+
+  <!-- Minimal luxury coffee-bean mark -->
+  <g transform="translate(450 108)">
+    <ellipse cx="0" cy="0" rx="58" ry="78" fill="#4B2E2B"/>
+    <path d="M-8 -69C22 -48 31 -18 22 7C14 30 -4 45 -26 63"
+          stroke="#C08552" stroke-width="7" stroke-linecap="round"/>
+    <path d="M-24 -58C-4 -39 2 -14 -5 9C-11 30 -24 45 -39 56"
+          stroke="#8C5A3C" stroke-width="4" stroke-linecap="round" opacity=".85"/>
+    <!-- subtle orbit -->
+    <path d="M-83 20C-74 -39 -29 -91 28 -93C75 -94 105 -59 99 -22"
+          stroke="#C08552" stroke-width="3" stroke-linecap="round"/>
+    <path d="M83 -20C74 39 29 91 -28 93C-75 94 -105 59 -99 22"
+          stroke="#8C5A3C" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="92" cy="-31" r="3.5" fill="#C08552"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="450" y="235"
+        text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="62"
+        font-weight="600"
+        letter-spacing="-1.5">
+    <tspan fill="#4B2E2B">Brew</tspan><tspan fill="#C08552">Grade</tspan>
+  </text>
+
+  <!-- Divider -->
+  <line x1="270" y1="268" x2="385" y2="268" stroke="#8C5A3C" stroke-width="1.5"/>
+  <circle cx="450" cy="268" r="4" fill="#C08552"/>
+  <line x1="515" y1="268" x2="630" y2="268" stroke="#8C5A3C" stroke-width="1.5"/>
+
+  <!-- Tagline -->
+  <text x="450" y="300"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="12"
+        font-weight="500"
+        letter-spacing="4"
+        fill="#8C5A3C">
+    PRECISION IN EVERY BEAN
+  </text>
+</svg>

@@ -1,0 +1,1566 @@
+@import "tailwindcss";
+
+
+/* =========================================================
+   BrewGrade
+   COFFEE DESIGN SYSTEM
+   ========================================================= */
+
+@theme {
+
+  /* =======================================================
+     BRAND COLORS
+     ======================================================= */
+
+  --coffee-cream: #FFF8F0;
+  --coffee-latte: #C08552;
+  --coffee-roast: #8C5A3C;
+  --coffee-espresso: #4B2E2B;
+
+
+  /* =======================================================
+     PRIMARY SYSTEM
+     ======================================================= */
+
+  --primary: #C08552;
+  --primary-hover: #A96F43;
+
+  --secondary: #8C5A3C;
+
+
+  /* =======================================================
+     BACKGROUNDS
+     ======================================================= */
+
+  --background: #FFF8F0;
+
+  --surface: #FFFFFF;
+
+  --surface-light: #F7EDE2;
+
+
+  /* =======================================================
+     TEXT
+     ======================================================= */
+
+  --text-primary: #4B2E2B;
+
+  --text-secondary: #6F5145;
+
+  --text-muted: #9B8173;
+
+
+  /* =======================================================
+     BORDERS
+     ======================================================= */
+
+  --border: rgba(75, 46, 43, 0.12);
+
+  --border-hover: rgba(192, 133, 82, 0.45);
+
+
+  /* =======================================================
+     GLOW
+     ======================================================= */
+
+  --glow: rgba(192, 133, 82, 0.25);
+
+
+  /* =======================================================
+     BORDER RADIUS
+     ======================================================= */
+
+  --radius-default: 0.25rem;
+
+  --radius-lg: 0.5rem;
+
+  --radius-xl: 0.75rem;
+
+  --radius-full: 9999px;
+
+
+  /* =======================================================
+     SPACING
+     ======================================================= */
+
+  --spacing-max-width: 1280px;
+
+  --spacing-base: 8px;
+
+  --spacing-gutter: 16px;
+
+  --spacing-container-padding: 24px;
+
+
+  /* =======================================================
+     FONTS
+     ======================================================= */
+
+  --font-headline-lg-mobile: "Inter", sans-serif;
+
+  --font-headline-lg: "Inter", sans-serif;
+
+  --font-label-sm: "JetBrains Mono", monospace;
+
+  --font-body-md: "Inter", sans-serif;
+
+  --font-display-lg: "Inter", sans-serif;
+
+
+  /* =======================================================
+     FONT SIZES
+     ======================================================= */
+
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 36px;
+  --text-headline-lg-mobile--font-weight: 300;
+
+
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-headline-lg--letter-spacing: -0.01em;
+  --text-headline-lg--font-weight: 300;
+
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--letter-spacing: 0.05em;
+  --text-label-sm--font-weight: 500;
+
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--font-weight: 400;
+
+
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 56px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 200;
+
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+
+  margin: 0;
+
+  min-width: 320px;
+
+  min-height: 100vh;
+
+  background-color: #FFF8F0;
+
+  color: #4B2E2B;
+
+  font-family: "Inter", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+#root {
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   MATERIAL SYMBOLS
+   ========================================================= */
+
+.material-symbols-outlined {
+
+  font-family: "Material Symbols Outlined";
+
+  font-weight: normal;
+
+  font-style: normal;
+
+  font-size: 24px;
+
+  line-height: 1;
+
+  letter-spacing: normal;
+
+  text-transform: none;
+
+  display: inline-block;
+
+  white-space: nowrap;
+
+  word-wrap: normal;
+
+  direction: ltr;
+
+  -webkit-font-feature-settings: "liga";
+
+  -webkit-font-smoothing: antialiased;
+
+  font-feature-settings: "liga";
+
+}
+
+
+/* =========================================================
+   GLASS PANEL
+   ========================================================= */
+
+.glass-panel {
+
+  background:
+    rgba(255, 255, 255, 0.62);
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+
+  border:
+    1px solid
+    rgba(75, 46, 43, 0.10);
+
+  box-shadow:
+    0 10px 35px
+    rgba(75, 46, 43, 0.05);
+
+}
+
+
+/* =========================================================
+   GLASS CARD
+   ========================================================= */
+
+.glass-card {
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.82),
+      rgba(247, 237, 226, 0.72)
+    );
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+
+  border:
+    1px solid
+    rgba(75, 46, 43, 0.10);
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.85);
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+
+}
+
+
+.glass-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(192, 133, 82, 0.08),
+      transparent 50%
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.5s ease;
+
+  pointer-events: none;
+
+}
+
+
+.glass-card:hover {
+
+  border-color:
+    rgba(192, 133, 82, 0.28);
+
+  box-shadow:
+    0 18px 45px
+    rgba(75, 46, 43, 0.10);
+
+}
+
+
+.glass-card:hover::before {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   GLOW
+   ========================================================= */
+
+.glow-primary {
+
+  box-shadow:
+    0 0 18px
+    rgba(192, 133, 82, 0.25);
+
+}
+
+
+.glow-secondary {
+
+  box-shadow:
+    0 0 18px
+    rgba(140, 90, 60, 0.20);
+
+}
+
+
+/* =========================================================
+   GLASS PRIMARY BUTTON
+   ========================================================= */
+
+.bg-glass-primary {
+
+  background:
+    #C08552;
+
+  color:
+    #FFF8F0;
+
+  box-shadow:
+    0 8px 25px
+    rgba(192, 133, 82, 0.20);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+
+}
+
+
+.bg-glass-primary:hover {
+
+  background:
+    #A96F43;
+
+  box-shadow:
+    0 12px 30px
+    rgba(192, 133, 82, 0.28);
+
+  filter:
+    brightness(1.04);
+
+}
+
+
+/* =========================================================
+   PRIMARY GLASS BUTTON
+   ========================================================= */
+
+.btn-primary-glass {
+
+  background:
+    rgba(192, 133, 82, 0.10);
+
+  border:
+    1px solid
+    rgba(192, 133, 82, 0.45);
+
+  color:
+    #8C5A3C;
+
+  backdrop-filter:
+    blur(10px);
+
+  -webkit-backdrop-filter:
+    blur(10px);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+
+}
+
+
+.btn-primary-glass:hover {
+
+  background:
+    rgba(192, 133, 82, 0.18);
+
+  border-color:
+    rgba(192, 133, 82, 0.65);
+
+  color:
+    #4B2E2B;
+
+  box-shadow:
+    0 0 25px
+    rgba(192, 133, 82, 0.18);
+
+}
+
+
+/* =========================================================
+   UPLOAD ZONE
+   ========================================================= */
+
+.upload-zone {
+
+  background:
+    rgba(192, 133, 82, 0.035);
+
+  border:
+    1px dashed
+    rgba(140, 90, 60, 0.35);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+}
+
+
+.upload-zone:hover {
+
+  background:
+    rgba(192, 133, 82, 0.07);
+
+  border-color:
+    rgba(192, 133, 82, 0.75);
+
+  box-shadow:
+    inset 0 0 30px
+    rgba(192, 133, 82, 0.08);
+
+}
+
+
+/* =========================================================
+   UPLOAD PULSE
+   ========================================================= */
+
+.upload-pulse {
+
+  animation:
+    pulse-border 2.5s infinite;
+
+}
+
+
+@keyframes pulse-border {
+
+  0% {
+
+    border-color:
+      rgba(140, 90, 60, 0.30);
+
+  }
+
+  50% {
+
+    border-color:
+      rgba(192, 133, 82, 0.70);
+
+    box-shadow:
+      0 0 22px
+      rgba(192, 133, 82, 0.12);
+
+  }
+
+  100% {
+
+    border-color:
+      rgba(140, 90, 60, 0.30);
+
+  }
+
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+   ========================================================= */
+
+.progress-bar {
+
+  height: 2px;
+
+  background:
+    rgba(75, 46, 43, 0.10);
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+
+.progress-bar::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  height: 100%;
+
+  width: 50%;
+
+  background:
+    #C08552;
+
+  animation:
+    indeterminate 2s infinite linear;
+
+}
+
+
+@keyframes indeterminate {
+
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+
+}
+
+
+/* =========================================================
+   AMBIENT BACKGROUND
+   ========================================================= */
+
+.ambient-bg {
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100vw;
+
+  height: 100vh;
+
+  z-index: -1;
+
+  background:
+
+    radial-gradient(
+      circle at 50% -10%,
+      rgba(192, 133, 82, 0.14) 0%,
+      transparent 45%
+    ),
+
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(140, 90, 60, 0.10) 0%,
+      transparent 50%
+    ),
+
+    #FFF8F0;
+
+  pointer-events: none;
+
+}
+
+
+.ambient-bg::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 600px;
+
+  height: 600px;
+
+  top: -350px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    rgba(192, 133, 82, 0.06);
+
+  filter:
+    blur(80px);
+
+  animation:
+    ambient-float 10s ease-in-out infinite;
+
+}
+
+
+@keyframes ambient-float {
+
+  0%,
+  100% {
+
+    transform:
+      translateX(-50%)
+      translateY(0);
+
+  }
+
+  50% {
+
+    transform:
+      translateX(-50%)
+      translateY(30px);
+
+  }
+
+}
+
+
+/* =========================================================
+   PAGE ENTER
+   ========================================================= */
+
+.page-enter {
+
+  animation:
+    page-enter 0.7s ease-out both;
+
+}
+
+
+@keyframes page-enter {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(14px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+/* =========================================================
+   FADE UP
+   ========================================================= */
+
+.fade-up {
+
+  animation:
+    fade-up 0.7s ease-out both;
+
+}
+
+
+@keyframes fade-up {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(24px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+.fade-up-delay-1 {
+  animation: fade-up 0.7s ease-out 0.1s both;
+}
+
+
+.fade-up-delay-2 {
+  animation: fade-up 0.7s ease-out 0.2s both;
+}
+
+
+.fade-up-delay-3 {
+  animation: fade-up 0.7s ease-out 0.3s both;
+}
+
+
+.fade-up-delay-4 {
+  animation: fade-up 0.7s ease-out 0.4s both;
+}
+
+
+/* =========================================================
+   FLOAT
+   ========================================================= */
+
+.float-slow {
+
+  animation:
+    float-slow 6s ease-in-out infinite;
+
+}
+
+
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+}
+
+
+/* =========================================================
+   GLOW PULSE
+   ========================================================= */
+
+.glow-pulse {
+
+  animation:
+    glow-pulse 3s ease-in-out infinite;
+
+}
+
+
+@keyframes glow-pulse {
+
+  0%,
+  100% {
+
+    box-shadow:
+      0 0 15px
+      rgba(192, 133, 82, 0.08);
+
+  }
+
+  50% {
+
+    box-shadow:
+      0 0 30px
+      rgba(192, 133, 82, 0.20);
+
+  }
+
+}
+
+
+/* =========================================================
+   SCAN LINE
+   ========================================================= */
+
+.scan-line {
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+
+.scan-line::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  top: -2px;
+
+  height: 1px;
+
+  background:
+    rgba(192, 133, 82, 0.75);
+
+  box-shadow:
+    0 0 12px
+    rgba(192, 133, 82, 0.50);
+
+  animation:
+    scan-line 3s ease-in-out infinite;
+
+}
+
+
+@keyframes scan-line {
+
+  0% {
+
+    transform:
+      translateY(0);
+
+    opacity: 0;
+
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+
+    transform:
+      translateY(100%);
+
+    opacity: 0;
+
+  }
+
+}
+
+
+/* =========================================================
+   INTERACTIVE CARD
+   ========================================================= */
+
+.interactive-card {
+
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+
+}
+
+
+.interactive-card:hover {
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(192, 133, 82, 0.28);
+
+  box-shadow:
+    0 15px 40px
+    rgba(75, 46, 43, 0.10);
+
+}
+
+
+/* =========================================================
+   INTERACTIVE BUTTON
+   ========================================================= */
+
+.interactive-button {
+
+  transition:
+    filter 200ms ease,
+    box-shadow 200ms ease;
+
+}
+
+
+.interactive-button:hover {
+
+  filter:
+    brightness(1.05);
+
+}
+
+
+.interactive-button:active {
+
+  transform:
+    scale(0.97);
+
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.site-navbar {
+
+  background:
+    rgba(255, 248, 240, 0.82);
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+
+  border:
+    1px solid
+    rgba(75, 46, 43, 0.10);
+
+  box-shadow:
+    0 8px 30px
+    rgba(75, 46, 43, 0.08);
+
+}
+
+
+/* =========================================================
+   NAVIGATION LINK
+   ========================================================= */
+
+.nav-link {
+
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color:
+    #6F5145;
+
+  transition:
+    color 200ms ease;
+
+}
+
+
+/* =========================================================
+   NAVIGATION HOVER
+   ========================================================= */
+
+.nav-link:hover {
+
+  color:
+    #8C5A3C;
+
+}
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+   ========================================================= */
+
+.nav-link-active {
+
+  color:
+    #4B2E2B;
+
+}
+
+
+/* =========================================================
+   INACTIVE NAVIGATION
+   ========================================================= */
+
+.nav-link-inactive {
+
+  color:
+    #6F5145;
+
+}
+
+
+/* =========================================================
+   SLIDING ACTIVE INDICATOR
+   ========================================================= */
+
+.nav-sliding-indicator {
+
+  position: absolute;
+
+  bottom: -2px;
+
+  height: 2px;
+
+  width: 48px;
+
+  border-radius: 9999px;
+
+  background:
+    #C08552;
+
+  box-shadow:
+    0 1px 6px
+    rgba(192, 133, 82, 0.30);
+
+  pointer-events: none;
+
+  transition:
+    left 450ms cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    ),
+    width 300ms ease,
+    opacity 200ms ease;
+
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+
+  background:
+    #F1E2D3;
+
+  border-top:
+    1px solid
+    rgba(75, 46, 43, 0.10);
+
+  color:
+    #4B2E2B;
+
+}
+
+
+/* Footer links NEVER scale */
+
+.site-footer a {
+
+  transition:
+    color 200ms ease,
+    opacity 200ms ease;
+
+}
+
+
+.site-footer a:hover {
+
+  color:
+    #C08552;
+
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+}
+
+
+input::placeholder,
+textarea::placeholder {
+
+  color:
+    rgba(75, 46, 43, 0.42);
+
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+
+  background:
+    rgba(192, 133, 82, 0.28);
+
+  color:
+    #4B2E2B;
+
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: inherit;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+  background:
+    #F3E6D8;
+}
+
+
+::-webkit-scrollbar-thumb {
+
+  background:
+    #C08552;
+
+  border-radius:
+    9999px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+  background:
+    #8C5A3C;
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    scroll-behavior:
+      auto !important;
+
+    transition-duration:
+      0.01ms !important;
+
+  }
+
+}
+
+/* =========================================================
+   PAGE TRANSITIONS
+   ========================================================= */
+
+.page-transition {
+
+  animation:
+    page-slide-in 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  will-change:
+    opacity,
+    transform;
+
+}
+
+
+@keyframes page-slide-in {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translate3d(0, 22px, 0)
+      scale(0.992);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+
+  }
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL SYSTEM
+   ========================================================= */
+
+.scroll-reveal-ready {
+
+  opacity: 0;
+
+  transform:
+    translate3d(0, 34px, 0);
+
+  transition:
+    opacity 750ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 750ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  transition-delay:
+    var(--reveal-delay, 0ms);
+
+  will-change:
+    opacity,
+    transform;
+
+}
+
+
+.scroll-reveal-visible {
+
+  opacity: 1;
+
+  transform:
+    translate3d(0, 0, 0);
+
+}
+
+
+/* =========================================================
+   REVEAL IMAGE / VISUAL CONTENT
+   ========================================================= */
+
+.scroll-reveal-ready img {
+
+  transition:
+    opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+
+}
+
+
+/* =========================================================
+   SMOOTH INTERACTIVE ELEMENTS
+   ========================================================= */
+
+button,
+a,
+input,
+textarea,
+select {
+
+  -webkit-tap-highlight-color:
+    transparent;
+
+}
+
+
+/* =========================================================
+   SCROLL PERFORMANCE
+   ========================================================= */
+
+.scroll-reveal-root {
+
+  width: 100%;
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION OVERRIDE
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .page-transition,
+  .scroll-reveal-ready,
+  .scroll-reveal-ready img {
+
+    animation: none !important;
+
+    transition: none !important;
+
+    opacity: 1 !important;
+
+    transform: none !important;
+
+  }
+
+}
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+.mobile-nav-link {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 13px 4px;
+
+  color:
+    #6F5145;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  transition:
+    color 200ms ease;
+
+}
+
+
+.mobile-nav-link:hover {
+
+  color:
+    #8C5A3C;
+
+}
+
+
+.mobile-nav-link-active {
+
+  color:
+    #4B2E2B;
+
+}
+
+
+/* Small active bar */
+
+.mobile-active-bar {
+
+  width: 34px;
+
+  height: 2px;
+
+  border-radius: 9999px;
+
+  background:
+    #C08552;
+
+  box-shadow:
+    0 1px 5px
+    rgba(192, 133, 82, 0.30);
+
+}
+
+
+/* =========================================================
+   MOBILE AUTH LINKS
+   ========================================================= */
+
+.mobile-auth-link {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+
+  padding: 11px 16px;
+
+  border-radius: 9999px;
+
+  color:
+    #6F5145;
+
+  font-family:
+    "JetBrains Mono",
+    monospace;
+
+  font-size: 12px;
+
+  transition:
+    color 200ms ease,
+    background-color 200ms ease;
+
+}
+
+
+.mobile-auth-link:hover {
+
+  color:
+    #8C5A3C;
+
+  background:
+    rgba(192, 133, 82, 0.08);
+
+}
+
+
+/* =========================================================
+   MOBILE GET STARTED
+   ========================================================= */
+
+.mobile-get-started {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+
+  padding: 12px 16px;
+
+  border-radius: 9999px;
+
+  background:
+    #C08552;
+
+  color:
+    #FFF8F0;
+
+  font-family:
+    "JetBrains Mono",
+    monospace;
+
+  font-size: 12px;
+
+  box-shadow:
+    0 8px 20px
+    rgba(192, 133, 82, 0.18);
+
+  transition:
+    filter 200ms ease,
+    transform 150ms ease;
+
+}
+
+
+.mobile-get-started:hover {
+
+  filter:
+    brightness(1.05);
+
+}
+
+
+.mobile-get-started:active {
+
+  transform:
+    scale(0.97);
+
+}
+
+
+/* =========================================================
+   MOBILE NAVBAR SIZING
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  .site-navbar {
+
+    max-width:
+      520px;
+
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .site-navbar {
+
+    width:
+      calc(100% - 16px);
+
+    top:
+      8px;
+
+  }
+
+
+  .site-navbar img {
+
+    width:
+      32px;
+
+    height:
+      32px;
+
+  }
+
+
+  .site-navbar span {
+
+    font-size:
+      16px;
+
+  }
+
+}
